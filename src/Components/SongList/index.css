@@ -1,0 +1,70 @@
+/* Song List Container */
+.list-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.list-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Song List Item */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between song details and duration */
+  padding: 10px 20px; /* Adjust padding for more space */
+  cursor: pointer;
+  color: #b3b3b3;
+  border-bottom: 1px solid #282828; /* Add a subtle border for separation */
+}
+
+.list-item.selected {
+  background-color: #282828;
+  color: #fff;
+}
+
+.list-item:hover {
+  color: #fff;
+}
+
+/* Album Art */
+.album-art {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+/* Song Details */
+.song-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.song-name {
+  font-size: 16px;
+  text-align: left; /* Align text to the left */
+}
+
+.artist-name {
+  font-size: 14px;
+  color: #b3b3b3;
+  text-align: left; /* Align text to the left */
+}
+
+/* Song Duration */
+.song-duration {
+  font-size: 14px;
+  color: #b3b3b3; /* Ensure the color matches the theme */
+  text-align: right; /* Align duration to the right */
+  white-space: nowrap; /* Prevent wrapping */
+  margin-left: 20px; /* Ensure it doesn't stick too close to the song details */
+}

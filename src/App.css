@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/* App Container */
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  transition: background 0.5s ease; /* Smooth transition when background changes */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Left Panel */
+.left-panel {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; /* Make it transparent to inherit background */
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Center Panel */
+.center-panel {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: transparent; /* Make it transparent to inherit background */
+}
+
+/* Right Panel */
+.right-panel {
+  width: 350px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent; /* Make it transparent to inherit background */
 }
 
-.App-link {
-  color: #61dafb;
+
+.logo {
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-image {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
 }
+
+/* Center Panel */
+
+
+.tab-menu {
+  display: flex;
+  justify-content: center; /* Center the tab menu */
+  margin-bottom: 20px;
+}
+
+.tab-menu > div {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+.tab-menu > div.active {
+  color: #ffffff;
+}
+
+
+
+
